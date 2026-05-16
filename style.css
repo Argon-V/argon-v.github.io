@@ -92,17 +92,6 @@ nav {
   border-bottom: 2px solid var(--rule);
 }
 
-#hero::after {
-  content: '';
-  position: absolute;
-  left: 4rem;
-  bottom: 0;
-  width: 3px;
-  height: 35%;
-  background: var(--accent);
-  opacity: 0.45;
-}
-
 .hero-tag {
   font-family: var(--font-display);
   font-size: 0.9rem;
