@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Your Name</title>
+  <title>Arik Van Der Loo — Electrical Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#">YN.</a>
+    <a class="nav-logo" href="#">AVdL<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -23,17 +23,15 @@
 
   <!-- HERO -->
   <section id="hero">
-    <p class="hero-tag">// Available for work</p>
-    <h1>Your <span>Name</span> Here.</h1>
+    <p class="hero-tag">Electrical Engineering Student — University of Waterloo</p>
+    <h1>Arik <span class="last-name">Van Der Loo</span></h1>
     <p class="hero-sub">
-      I build thoughtful software and beautiful interfaces. Based wherever you like — working on things that matter.
+      Hardware engineer with a passion for embedded systems, PCB design, and power electronics. Building things that work in the real world.
     </p>
     <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View Work</a>
+      <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="#contact" class="btn btn-ghost">Get In Touch</a>
     </div>
-
-    <!-- dot grid decoration -->
     <div class="hero-grid" id="heroGrid"></div>
   </section>
 
@@ -42,36 +40,40 @@
     <p class="section-label">01 — About</p>
     <div class="about-grid">
       <div>
-        <h2>Crafting digital things since forever.</h2>
-        <p>I'm a developer and designer passionate about building software that's both powerful and delightful to use. I care deeply about the details — from architecture to animation.</p>
-        <p>When I'm not coding, you'll find me exploring new ideas, tinkering with side projects, or hunting for good coffee.</p>
+        <h2>Engineer. Builder. Problem Solver.</h2>
+        <p>I'm a 4th-year Electrical Engineering student at the University of Waterloo with hands-on co-op experience in hardware bring-up, embedded firmware, PCB design, and industrial electrical systems.</p>
+        <p>From tuning a BLDC motor controller to engineering $600M+ worth of battery storage proposals, I thrive at the intersection of hardware and real-world impact.</p>
         <div class="skills-list">
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">KiCAD</span>
+          <span class="skill-tag">AutoCAD</span>
+          <span class="skill-tag">STM32</span>
+          <span class="skill-tag">Fusion360</span>
+          <span class="skill-tag">Altium</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">VHDL</span>
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">ARMv7</span>
+          <span class="skill-tag">FreeRTOS</span>
+          <span class="skill-tag">Javascript</span>
         </div>
       </div>
       <div class="stat-grid">
         <div class="stat-box">
-          <div class="stat-num">12+</div>
-          <div class="stat-label">Projects shipped</div>
+          <div class="stat-num">3</div>
+          <div class="stat-label">Co-op terms</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">3+</div>
-          <div class="stat-label">Years experience</div>
+          <div class="stat-num">$600M</div>
+          <div class="stat-label">Projects proposed</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">∞</div>
-          <div class="stat-label">Bugs squashed</div>
+          <div class="stat-num">$30K</div>
+          <div class="stat-label">Saved in-house</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">☕</div>
-          <div class="stat-label">Cups of coffee</div>
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Loop diagrams updated</div>
         </div>
       </div>
     </div>
@@ -79,43 +81,73 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <p class="section-label">02 — Work</p>
-    <h2>Selected projects.</h2>
+    <p class="section-label">02 — Projects</p>
+    <h2>Selected Work.</h2>
     <div class="projects-grid">
 
       <div class="project-card">
         <p class="project-num">// 001</p>
-        <a class="project-link" href="#" title="View project">↗</a>
-        <h3 class="project-title">Project Alpha</h3>
-        <p class="project-desc">A brief description of what this project does and the problem it solves. Keep it punchy and clear.</p>
+        <h3 class="project-title">MCU Debugger PCB</h3>
+        <p class="project-desc">Designed, assembled, and tested a custom MCU debugger PCB for an STM32-based CPU board at AlumaPower. Completed full hardware bring-up and validation of the power distribution PCB.</p>
         <div class="project-tags">
-          <span class="project-tag">React</span>
-          <span class="project-tag">Node.js</span>
-          <span class="project-tag">PostgreSQL</span>
+          <span class="project-tag">KiCAD</span>
+          <span class="project-tag">STM32</span>
+          <span class="project-tag">Hardware</span>
         </div>
       </div>
 
       <div class="project-card">
         <p class="project-num">// 002</p>
-        <a class="project-link" href="#" title="View project">↗</a>
-        <h3 class="project-title">Project Beta</h3>
-        <p class="project-desc">Another exciting project description. What did you build? What impact did it have? What was the cool challenge?</p>
+        <h3 class="project-title">BLDC FOC Controller</h3>
+        <p class="project-desc">Spent 6 weeks troubleshooting and tuning a sensorless Field-Oriented Control motor controller for a challenging low-speed, high-startup-torque use case. Wrote firmware using POSIX-like functions in FreeRTOS.</p>
         <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">FastAPI</span>
-          <span class="project-tag">Docker</span>
+          <span class="project-tag">FreeRTOS</span>
+          <span class="project-tag">C</span>
+          <span class="project-tag">Motor Control</span>
         </div>
       </div>
 
       <div class="project-card">
         <p class="project-num">// 003</p>
-        <a class="project-link" href="#" title="View project">↗</a>
-        <h3 class="project-title">Project Gamma</h3>
-        <p class="project-desc">Your third featured project. Consider highlighting the most technically interesting or visually impressive work here.</p>
+        <h3 class="project-title">Solar Car PCB Design</h3>
+        <p class="project-desc">Designed PCB schematics using Altium for the Midnight Sun Single Occupant Long Distance Solar Car. Contributed to a competition-grade electrical system for a real racing vehicle.</p>
         <div class="project-tags">
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">Three.js</span>
-          <span class="project-tag">WebGL</span>
+          <span class="project-tag">Altium</span>
+          <span class="project-tag">PCB Design</span>
+          <span class="project-tag">Automotive</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">// 004</p>
+        <h3 class="project-title">Power Usage Meter</h3>
+        <p class="project-desc">Group project involving design, fabrication, and testing of a power usage meter using a microchip and LCD display. Covered the full embedded development cycle from schematic to working prototype.</p>
+        <div class="project-tags">
+          <span class="project-tag">Embedded C</span>
+          <span class="project-tag">PCB</span>
+          <span class="project-tag">Hardware</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">// 005</p>
+        <h3 class="project-title">PLC Panel Engineering Package</h3>
+        <p class="project-desc">Created a complete in-house engineering drawing package for a PLC panel at Rain Carbon Canada — saving the company approximately $30,000 in external engineering costs.</p>
+        <div class="project-tags">
+          <span class="project-tag">AutoCAD</span>
+          <span class="project-tag">PLC</span>
+          <span class="project-tag">Industrial</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">// 006</p>
+        <h3 class="project-title">FIRST Robotics 2019 & 2020</h3>
+        <p class="project-desc">Contributed to mechanical and electrical design and fabrication of competitive FIRST Robotics challenge robots during high school, building a foundation in systems integration and real-time control.</p>
+        <div class="project-tags">
+          <span class="project-tag">Mechanical</span>
+          <span class="project-tag">Electrical</span>
+          <span class="project-tag">Robotics</span>
         </div>
       </div>
 
@@ -125,19 +157,18 @@
   <!-- CONTACT -->
   <section id="contact">
     <p class="section-label" style="justify-content:center">03 — Contact</p>
-    <h2>Let's build something.</h2>
-    <p>Have a project in mind or just want to say hello? My inbox is always open.</p>
-    <a href="mailto:you@email.com" class="btn btn-primary">Say Hello →</a>
+    <h2>Let's Build Something.</h2>
+    <p>Looking for a driven hardware engineering intern or new grad? I'd love to hear from you.</p>
+    <a href="mailto:am2vande@uwaterloo.ca" class="btn btn-primary">Send a Message →</a>
     <div class="social-links">
       <a href="https://github.com/argon-v" class="social-link" target="_blank">GitHub</a>
-      <a href="#" class="social-link">LinkedIn</a>
-      <a href="#" class="social-link">Twitter</a>
+      <a href="https://linkedin.com/in/arik-vdl" class="social-link" target="_blank">LinkedIn</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2026 Your Name. All rights reserved.</span>
+    <span>© 2026 Arik Van Der Loo</span>
     <span>argon-v.github.io</span>
   </footer>
 
