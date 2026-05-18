@@ -49,6 +49,7 @@
           <span class="skill-tag">STM32</span>
           <span class="skill-tag">Fusion360</span>
           <span class="skill-tag">Altium</span>
+          <span class="skill-tag">Proteus</span>
           <span class="skill-tag">C++</span>
           <span class="skill-tag">C</span>
           <span class="skill-tag">VHDL</span>
@@ -82,73 +83,62 @@
   <!-- PROJECTS -->
   <section id="projects">
     <p class="section-label">02 — Projects</p>
-    <h2>Standout project contributions.</h2>
+    <h2>Standout projects.</h2>
     <div class="projects-grid">
 
-      <div class="project-card">
+      <div class="project-card" data-project="001">
         <p class="project-num">// 001</p>
         <h3 class="project-title">MCU Debugger PCB</h3>
-        <p class="project-desc">Designed a custom debugger PCB for an STM32-based CPU board. Fabricated & assembled PCB. Completed full hardware bring-up and validation of the PCB.</p>
+        <p class="project-desc">Designed and fabricated a custom debugger PCB for an STM32-based CPU board. Completed full hardware bring-up and validation of the PCB.</p>
         <div class="project-tags">
           <span class="project-tag">KiCAD</span>
           <span class="project-tag">STM32</span>
-          <span class="project-tag">Hardware</span>
         </div>
+        <span class="card-hint">Click to expand ↗</span>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-project="002">
         <p class="project-num">// 002</p>
-        <h3 class="project-title">BLDC FOC Controller</h3>
-        <p class="project-desc">Spent 6 weeks troubleshooting and tuning a sensorless Field-Oriented Control motor controller for a challenging low-speed, high-startup-torque use case. Wrote firmware using POSIX-like functions in FreeRTOS.</p>
+        <h3 class="project-title">Irrigation Reservoir Control System</h3>
+        <p class="project-desc">Designed, assembled, and tested a breadboard prototype that would control pumps in an irrigation system. Designed a PCB based on the prototype assembly.</p>
         <div class="project-tags">
-          <span class="project-tag">FreeRTOS</span>
+          <span class="project-tag">Proteus</span>
+          <span class="project-tag">STM32</span>
           <span class="project-tag">C</span>
-          <span class="project-tag">Motor Control</span>
         </div>
+        <span class="card-hint">Click to expand ↗</span>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-project="003">
         <p class="project-num">// 003</p>
+        <h3 class="project-title">Power Usage Meter</h3>
+        <p class="project-desc">Group project involving design, fabrication, firmware, and testing of a power usage meter prototype using an STM32 and LCD display. Followed the embedded development pathway from initial idea to working prototype.</p>
+        <div class="project-tags">
+          <span class="project-tag">C</span>
+          <span class="project-tag">STM32</span>
+        </div>
+        <span class="card-hint">Click to expand ↗</span>
+      </div>
+
+      <div class="project-card" data-project="004">
+        <p class="project-num">// 004</p>
         <h3 class="project-title">Solar Car PCB Design</h3>
-        <p class="project-desc">Designed PCB schematics using Altium for the Midnight Sun Single Occupant Long Distance Solar Car. Contributed to a competition-grade electrical system for a real racing vehicle.</p>
+        <p class="project-desc">Leveraged Altium Designer to create a PCB schematic for the Midnight Sun Solar Car Team. Contributed to the electrical system for the Midnight Sun MSXV race car.</p>
         <div class="project-tags">
           <span class="project-tag">Altium</span>
-          <span class="project-tag">PCB Design</span>
-          <span class="project-tag">Automotive</span>
         </div>
+        <span class="card-hint">Click to expand ↗</span>
       </div>
 
-      <div class="project-card">
-        <p class="project-num">// 004</p>
-        <h3 class="project-title">Power Usage Meter</h3>
-        <p class="project-desc">Group project involving design, fabrication, and testing of a power usage meter using a microchip and LCD display. Covered the full embedded development cycle from schematic to working prototype.</p>
+      <div class="project-card" data-project="005">
+      <p class="project-num">// 005</p>
+      <h3 class="project-title">FIRST Robotics 2019 & 2020</h3>
+        <p class="project-desc">Worked as a key part of a small team working on mechanical and electrical design and fabrication of two competitive FIRST Robotics Challenge robots.</p>
         <div class="project-tags">
-          <span class="project-tag">Embedded C</span>
-          <span class="project-tag">PCB</span>
-          <span class="project-tag">Hardware</span>
+          <span class="project-tag">Fabrication</span>
+          <span class="project-tag">Control Systems</span>
         </div>
-      </div>
-
-      <div class="project-card">
-        <p class="project-num">// 005</p>
-        <h3 class="project-title">PLC Panel Engineering Package</h3>
-        <p class="project-desc">Created a complete in-house engineering drawing package for a PLC panel at Rain Carbon Canada — saving the company approximately $30,000 in external engineering costs.</p>
-        <div class="project-tags">
-          <span class="project-tag">AutoCAD</span>
-          <span class="project-tag">PLC</span>
-          <span class="project-tag">Industrial</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <p class="project-num">// 006</p>
-        <h3 class="project-title">FIRST Robotics 2019 & 2020</h3>
-        <p class="project-desc">Contributed to mechanical and electrical design and fabrication of competitive FIRST Robotics challenge robots during high school, building a foundation in systems integration and real-time control.</p>
-        <div class="project-tags">
-          <span class="project-tag">Mechanical</span>
-          <span class="project-tag">Electrical</span>
-          <span class="project-tag">Robotics</span>
-        </div>
+        <span class="card-hint">Click to expand ↗</span>
       </div>
 
     </div>
@@ -171,6 +161,14 @@
     <span>© 2026 Arik Van Der Loo</span>
     <span>argon-v.github.io</span>
   </footer>
+
+  <!-- PROJECT MODAL -->
+  <div id="modal-overlay">
+    <div id="modal">
+      <button id="modal-close" aria-label="Close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 

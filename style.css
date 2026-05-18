@@ -465,8 +465,217 @@ footer {
   nav { padding: 1rem 1.5rem; }
   .nav-links { gap: 1.5rem; }
   #hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
-  #hero::after { left: 1.5rem; }
   #about .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-grid { display: none; }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+}
+
+/* ---- CARD HINT ---- */
+.card-hint {
+  display: block;
+  margin-top: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+  transition: color 0.2s;
+}
+
+.project-card {
+  cursor: pointer;
+}
+
+.project-card:hover .card-hint {
+  color: var(--accent-bright);
+}
+
+/* ---- MODAL OVERLAY ---- */
+#modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 10, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+#modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ---- MODAL BOX ---- */
+#modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  width: 100%;
+  max-width: 780px;
+  max-height: 88vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+#modal-overlay.open #modal {
+  transform: translateY(0);
+}
+
+#modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin: 1.25rem 1.25rem 0 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  z-index: 10;
+}
+
+#modal-close:hover {
+  color: var(--accent-bright);
+  border-color: var(--accent);
+}
+
+/* ---- MODAL CONTENT ---- */
+#modal-content {
+  padding: 2rem 2.5rem 2.5rem;
+  clear: both;
+}
+
+.modal-num {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 0.5rem;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Photo gallery — placeholder grid, ready for real images */
+.modal-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.modal-photo {
+  aspect-ratio: 4/3;
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-photo-placeholder {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-align: center;
+  padding: 1rem;
+}
+
+.modal-section-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.modal-section-title::before {
+  content: '';
+  width: 3px;
+  height: 1em;
+  background: var(--accent);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.modal-body {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.85;
+  margin-bottom: 1.75rem;
+}
+
+.modal-body p { margin-bottom: 0.75rem; }
+
+.modal-highlights {
+  list-style: none;
+  margin-bottom: 1.75rem;
+}
+
+.modal-highlights li {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  gap: 0.75rem;
+}
+
+.modal-highlights li::before {
+  content: '→';
+  color: var(--accent);
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  #modal-content { padding: 1.5rem; }
+  #modal-overlay { padding: 1rem; }
 }
