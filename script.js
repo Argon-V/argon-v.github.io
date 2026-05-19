@@ -92,7 +92,7 @@ const projects = {
   },
   '004': {
     num: '// 004',
-    title: 'Solar Car Dashboard PCB Design',
+    title: 'Solar Car Dashboard Schematic Design',
     tags: ['Altium'],
     photos: [
       { src: 'images/dashboard_schematic.png', alt: 'Dashboard PCB schematic' },
@@ -184,4 +184,44 @@ overlay.addEventListener('click', (e) => {
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
+});
+
+// ─── LIGHTBOX ────────────────────────────────────────────────
+const lightbox      = document.getElementById('lightbox');
+const lightboxImg   = document.getElementById('lightbox-img');
+const lightboxCap   = document.getElementById('lightbox-caption');
+const lightboxClose = document.getElementById('lightbox-close');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightboxCap.textContent = alt || '';
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  // Restore scroll only if modal isn't also open
+  if (!overlay.classList.contains('open')) {
+    document.body.style.overflow = '';
+  }
+}
+
+// Delegate clicks on modal photos to the lightbox
+document.getElementById('modal-content').addEventListener('click', (e) => {
+  const img = e.target.closest('.modal-photo img');
+  if (img) openLightbox(img.src, img.alt);
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+    closeLightbox();
+  }
 });

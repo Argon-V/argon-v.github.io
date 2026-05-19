@@ -679,3 +679,86 @@ footer {
   #modal-content { padding: 1.5rem; }
   #modal-overlay { padding: 1rem; }
 }
+
+/* ---- LIGHTBOX ---- */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgba(5, 5, 10, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+#lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+  transform: scale(0.96);
+  transition: transform 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+#lightbox.open img {
+  transform: scale(1);
+}
+
+#lightbox-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#lightbox-close:hover {
+  color: var(--accent-bright);
+  border-color: var(--accent);
+}
+
+#lightbox-caption {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
+  background: rgba(13, 13, 20, 0.82);
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+}
+
+/* Make modal photos feel clickable */
+.modal-photo img {
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+}
+
+.modal-photo img:hover {
+  opacity: 0.82;
+}
