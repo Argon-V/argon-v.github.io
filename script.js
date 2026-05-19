@@ -44,7 +44,7 @@ const projects = {
   '001': {
     num: '// 001',
     title: 'MCU Debugger PCB',
-    tags: ['KiCAD', 'STM32', 'Hardware', 'PCB Design'],
+    tags: ['KiCAD', 'STM32'],
     photos: [
       { src: 'images/debug_schematic.png', alt: 'Debugger KiCAD PCB schematic' },
       { src: 'images/debug_top.jpg', alt: 'Assembled PCB top' },
